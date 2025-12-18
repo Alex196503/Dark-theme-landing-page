@@ -9,19 +9,18 @@ document.addEventListener(('DOMContentLoaded'),()=>{
         if(email.value.trim()==='')
         {
             paragrafError.innerHTML = 'Required value!';
+            email.style.border='2px solid hsl(0, 100%, 63%)';
         }
-        else if(email.value.includes('example@mail.com') || email.value.length <=5)
-        {
-            paragrafError.innerHTML = 'Invalid mail!';
-        }
-        else if(emailRegex.test(email.value)===false)
+        else if(emailRegex.test(email.value)===false || (email.value.includes('example@gmail.com')))
         {
             paragrafError.innerHTML ='False mail!';
+            email.style.border='2px solid hsl(0, 100%, 63%)'
         }
         else{
             form.reset();
             window.alert('Mail sent succesfully!');
             paragrafError.innerHTML='';
+            email.style.border='none';
         }
 
     })
