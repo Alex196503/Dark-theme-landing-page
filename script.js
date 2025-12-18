@@ -16,7 +16,7 @@ document.addEventListener(('DOMContentLoaded'),()=>{
         }
         else if(emailRegex.test(email.value)===false)
         {
-            paragrafError.innerHTML ='False mail, not respecting a valid one!';
+            paragrafError.innerHTML ='False mail!';
         }
         else{
             form.reset();
